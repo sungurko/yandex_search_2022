@@ -11,8 +11,15 @@ class Locators:
 class Search(Page):
 
     def check_input_search(self):
-        input_search = self.driver.find_element(Locators.LOCATOR_YANDEX_SEARCH_FIELD)
+        input_search = self.driver.find_elements(*Locators.LOCATOR_YANDEX_SEARCH_FIELD)
+        #input_search.click()
         return input_search
+
+
+
+
+
+
 
     def enter_word(self, word):
         search_field = self.find_element(Locators.LOCATOR_YANDEX_SEARCH_FIELD)
