@@ -24,8 +24,7 @@ class Search(Page):
         self.driver.switch_to.frame(self.driver.find_element(*Locators.LOCATOR_YANDEX_SEARCH_FIELD))
         search_field = self.driver.find_element(*Locators.LOCATOR_YANDEX_MINI_SUGGEST)
         return search_field
-        #search_field.send_keys()
-        time.sleep(5)
+
 
 
 

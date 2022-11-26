@@ -8,21 +8,11 @@ def test_search_yandex(browser):
     main_page.go_to_site() # загрузка главной страницы yandex.ru
     assert main_page.check_input_search(), ('Нет поля поиска') # проверка наличия поля поиска
     time.sleep(15)
-    main_page.enter_word("Тензор")
+    main_page.enter_word("Тензор") # ввести в поиск Тензор
     time.sleep(5)
     assert main_page.check_suggest(), ('Нет таблицы подсказок')
 
 
-#def test_search_yandex(self):
-#		main_page = page.MainPage(self.driver) # загрузка главной страницы yandex.ru
-#		assert main_page.check_input_search(), ('Нет поля поиска')
-#		main_page.search_text_element = "Тензор"
-#		time.sleep(5)
-#		assert main_page.check_suggest(), ('Нет таблицы подсказок')
-#		main_page.enter()
-#		time.sleep(5)
-#		result_page=main_page.top_5_result()
-#		assert 'tensor.ru' in result_page, ('tensor.ru не найден')
     
 
 class MyPlugin:
