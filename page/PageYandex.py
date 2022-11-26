@@ -9,7 +9,6 @@ class Search(Page):
 
     def check_input_search(self):
         input_search = self.driver.find_elements(*Locators.LOCATOR_YANDEX_SEARCH_FIELD)
-        #input_search.click()
         return input_search
 
 
@@ -22,5 +21,5 @@ class Search(Page):
         search_field = self.find_element(Locators.LOCATOR_YANDEX_SEARCH_FIELD)
         search_field.click()
         search_field.send_keys(word)
-        #search_field.click()
+        search_field.click()
         return search_field

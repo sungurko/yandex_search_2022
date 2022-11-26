@@ -9,10 +9,10 @@ def test_search_yandex(browser):
     assert main_page.check_input_search(), ('Нет поля поиска') # проверка наличия поля поиска
 
     
-    #time.sleep(5)
+    time.sleep(10)
 
     main_page.enter_word("Тензор")
-    #time.sleep(5)
+    time.sleep(5)
 
 
 #def test_search_yandex(self):
