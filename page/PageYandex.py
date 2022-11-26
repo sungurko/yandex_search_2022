@@ -1,11 +1,8 @@
-from BasePage import Page
-from selenium.webdriver.common.by import By
+from page.base_page import Page
+from page.locators import Locators
 import time
 
 
-class Locators:
-    LOCATOR_YANDEX_SEARCH_FIELD = (By.CSS_SELECTOR, "[class='dzen-search-arrow-common__frame']")
-    LOCATOR_YANDEX_SEARCH_BUTTON = (By.CSS_SELECTOR, "[class='arrow__input mini-suggest__input']")
 
 
 class Search(Page):

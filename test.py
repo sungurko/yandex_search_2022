@@ -1,7 +1,7 @@
 import pytest
 import time
 
-from yandex import Search
+from page.PageYandex import Search
 
 def test_search_yandex(browser):
     main_page = Search(browser)
