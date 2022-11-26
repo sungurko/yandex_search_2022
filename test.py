@@ -7,12 +7,10 @@ def test_search_yandex(browser):
     main_page = Search(browser)
     main_page.go_to_site() # загрузка главной страницы yandex.ru
     assert main_page.check_input_search(), ('Нет поля поиска') # проверка наличия поля поиска
-
-    
-    time.sleep(10)
-
+    time.sleep(15)
     main_page.enter_word("Тензор")
     time.sleep(5)
+    assert main_page.check_suggest(), ('Нет таблицы подсказок')
 
 
 #def test_search_yandex(self):
@@ -25,15 +23,11 @@ def test_search_yandex(browser):
 #		time.sleep(5)
 #		result_page=main_page.top_5_result()
 #		assert 'tensor.ru' in result_page, ('tensor.ru не найден')
-
-
-
-
     
 
 class MyPlugin:
 	def sessionfinish(self):
-		print("*** Отчет о завершении теста")
+		print("*** test report")
 
 if __name__ == '__main__':
 	pytest.main([__file__], plugins=[MyPlugin()])
