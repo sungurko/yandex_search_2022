@@ -11,6 +11,8 @@ def test_search_yandex(browser):
     main_page.enter_word("Тензор") # ввести в поиск Тензор
     time.sleep(5)
     assert main_page.check_suggest(), ('Нет таблицы подсказок')
+    main_page.enter()
+    time.sleep(15)
 
 
     
