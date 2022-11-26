@@ -33,6 +33,24 @@ class Search(Page):
         self.driver.switch_to.window(tabs[value])
         return tabs
 
+    def links_tensor(self):
+        links=self.driver.find_element(*Locators.SEARCH_RESULT)
+        links.click()
+        return links
+
+    def current_url(self):
+        url = self.driver.current_url
+        return url
+
+
+
+
+
+
+
+
+
+
 
 
 

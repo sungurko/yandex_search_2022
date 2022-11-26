@@ -14,6 +14,11 @@ def test_search_yandex(browser):
     main_page.enter()
     time.sleep(5)
     main_page.tab_switch(1) # переключиться на вторую вкладку
+    main_page.links_tensor()
+    time.sleep(5)
+    main_page.tab_switch(2)
+    time.sleep(5)
+    assert main_page.current_url() == 'https://tensor.ru/', ('tensor.ru не найден')
 
 
     
