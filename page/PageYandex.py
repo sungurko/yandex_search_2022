@@ -27,6 +27,12 @@ class Search(Page):
         button.click()
         return button
 
+    def tab_switch(self, value):
+        '''Переключатель вкладок'''
+        tabs = self.driver.window_handles
+        self.driver.switch_to.window(tabs[value])
+        return tabs
+
 
 
 

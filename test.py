@@ -7,12 +7,13 @@ def test_search_yandex(browser):
     main_page = Search(browser)
     main_page.go_to_site() # загрузка главной страницы yandex.ru
     assert main_page.check_input_search(), ('Нет поля поиска') # проверка наличия поля поиска
-    time.sleep(15)
+    time.sleep(5)
     main_page.enter_word("Тензор") # ввести в поиск Тензор
     time.sleep(5)
     assert main_page.check_suggest(), ('Нет таблицы подсказок')
     main_page.enter()
-    time.sleep(15)
+    time.sleep(5)
+    main_page.tab_switch(1) # переключиться на вторую вкладку
 
 
     
