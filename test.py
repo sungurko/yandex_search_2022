@@ -7,10 +7,10 @@ def test_yandex_search(browser):
     yandex_main_page = Search(browser)
 
     yandex_main_page.go_to_site()
-    time.sleep(15)
+    time.sleep(5)
 
     yandex_main_page.enter_word("Тензор")
-    time.sleep(15)
+    time.sleep(10)
     
 
 class MyPlugin:
