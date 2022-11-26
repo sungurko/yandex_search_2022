@@ -1,4 +1,4 @@
-from page import Page
+from BasePage import Page
 from selenium.webdriver.common.by import By
 import time
 
