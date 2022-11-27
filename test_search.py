@@ -1,5 +1,4 @@
 import pytest
-import time
 
 from page.PageYandex import Search
 
@@ -17,7 +16,7 @@ def test_search_yandex(browser):
 
 class MyPlugin:
 	def sessionfinish(self):
-		print("*** test report")
+		print("*** test report ***")
 
 if __name__ == '__main__':
 	pytest.main([__file__], plugins=[MyPlugin()])

@@ -11,6 +11,9 @@ def test_images(browser):
     assert main_page.check_link_images(), ('Нет ссылки на картинки') # проверка наличи ссылки «Картинки»
     time.sleep(5)
     main_page.tab_switch(1) # переключиться на вторую вкладку
+    assert main_page.current_url()[:25] == 'https://yandex.ru/images/', ('url отличается')
+
+
 
 
     

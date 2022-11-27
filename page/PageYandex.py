@@ -1,6 +1,5 @@
 from page.base_page import Page
 from page.locators import Locators
-import time
 
 
 class Search(Page):

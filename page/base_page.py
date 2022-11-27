@@ -5,7 +5,6 @@ from selenium.webdriver.support import expected_conditions as EC
 class Page:
 	def __init__(self, driver):
 		self.driver = driver
-		#self.base_url = "https://yandex.ru/search/?text=&lr=16"
 		self.base_url = "https://www.yandex.ru/"
 
 	def find_element(self, locator,time=10):
