@@ -34,10 +34,7 @@ def test_images(browser):
 
 
 
-class MyPlugin:
-	def sessionfinish(self):
-		print("*** test report")
 
 if __name__ == '__main__':
-	pytest.main([__file__], plugins=[MyPlugin()])
+	pytest.main([__file__])
 
