@@ -1,6 +1,5 @@
 import pytest
 import allure
-import time
 from page.PageYandex import Search
 
 
