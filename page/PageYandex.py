@@ -16,6 +16,11 @@ class Search(Page):
         search_field.click()
         return search_field
 
+    def input_search(self):
+        search_field = self.find_element(Locators.LOCATOR_YANDEX_SEARCH_FIELD)
+        search_field.click()
+        return search_field
+
     def check_suggest(self):
         self.driver.switch_to.frame(self.driver.find_element(*Locators.LOCATOR_YANDEX_SEARCH_FIELD))
         search_field = self.driver.find_element(*Locators.LOCATOR_YANDEX_MINI_SUGGEST)
