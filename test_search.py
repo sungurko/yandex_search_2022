@@ -1,6 +1,6 @@
 import pytest
-
 from page.PageYandex import Search
+
 
 def test_search_yandex(browser):
     main_page = Search(browser)
@@ -19,5 +19,5 @@ class MyPlugin:
 		print("*** test report ***")
 
 if __name__ == '__main__':
-	pytest.main([__file__], plugins=[MyPlugin()])
+	pytest.main([__file__],plugins=[MyPlugin()])
 

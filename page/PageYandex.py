@@ -58,6 +58,20 @@ class Search(Page):
         return images_click
 
 
+    def open_top(self):
+        img = self.driver.find_elements(*Locators.CLASS_NAME)
+        return img
+
+
+    def input_text(self):
+        input_text = self.driver.find_element(*Locators.CLASS_NAME2)
+        return input_text
+
+    def open_img(self):
+        img1 = self.driver.find_elements(*Locators.CLASS_NAME1)
+        return img1
+
+
 
 
 
