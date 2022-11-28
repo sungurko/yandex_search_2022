@@ -1,5 +1,5 @@
-import pytest
 import allure
+import pytest
 from page.PageSearch import Search
 
 

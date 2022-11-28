@@ -7,6 +7,6 @@ class Locators:
 	SEARCH_BUTTON = (By.CSS_SELECTOR, "[class='arrow__button']") # кнопка найти
 	SEARCH_RESULT = (By.XPATH, "//*[@id='search-result']/li[1]/div/div[1]/div[1]/a/h2/span") # результаты поиска
 	LINK_IMAGE = (By.XPATH, "//span[contains(@class, 'images')]")
-	IMAGE_FIRST_CATEGORY = (By.CLASS_NAME, 'Link')
-	CLASS_NAME1=(By.CLASS_NAME, 'serp-item__link')
-	CLASS_NAME2=(By.CLASS_NAME, 'input__control')
+	IMAGE_FIRST_CATEGORY = (By.CLASS_NAME, 'Link') # первая категория
+	CLASS_NAME1=(By.CLASS_NAME, 'serp-item__link') # первая картинка
+	CLASS_NAME2=(By.CLASS_NAME, 'input__control') # поле поиска картинок

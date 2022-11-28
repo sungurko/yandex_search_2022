@@ -1,13 +1,10 @@
-from selenium.webdriver.common.keys import Keys
 import allure
+from selenium.webdriver.common.keys import Keys
 from page.base_page import Page
 from page.locators import Locators
 
 
-
 class Images(Page):
-
-
     @allure.feature('Проверка ссылки «Картинки» и переход по ней')
     def check_link_image(self):
         with allure.step('Проверить наличие ссылки Картинки'):
@@ -35,7 +32,7 @@ class Images(Page):
         return tabs
 
     def current_url(self):
-        '''Текущий url'''
+        '''Немного не доделал, можно было внести в проверку и избавится'''
         url = self.driver.current_url
         return url
 
