@@ -17,3 +17,5 @@ class Page:
 
 	def go_to_site(self):
 		return self.driver.get(self.base_url)
+
+	

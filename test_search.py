@@ -1,6 +1,6 @@
 import pytest
 import allure
-from page.PageYandex import Search
+from page.PageSearch import Search
 
 
 def test_search_yandex(browser):
@@ -18,5 +18,4 @@ def test_search_yandex(browser):
 
 
 if __name__ == '__main__':
-	pytest.main([__file__])
-
+    pytest.main([__file__])

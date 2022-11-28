@@ -5,7 +5,7 @@ from page.locators import Locators
 
 
 
-class Search(Page):
+class Images(Page):
 
 
     @allure.feature('Проверка поля поиска подсказки suggest')
@@ -36,6 +36,11 @@ class Search(Page):
         self.driver.switch_to.window(tabs[value])
         return tabs
 
+    def current_url(self):
+        '''Текущий url'''
+        url = self.driver.current_url
+        return url
+
     def links_tensor(self):
         '''Переход по ссылке'''
         links=self.driver.find_element(*Locators.SEARCH_RESULT)
@@ -51,7 +56,7 @@ class Search(Page):
 
     '''images'''
 
-    def input_search(self):
+    def click_input_search(self):
         search_field = self.find_element(Locators.LOCATOR_YANDEX_SEARCH_FIELD)
         search_field.click()
         return search_field
@@ -68,28 +73,15 @@ class Search(Page):
         return images_click
 
 
-    def open_top(self):
-        img = self.driver.find_elements(*Locators.CLASS_NAME)
+    def open_first_category(self):
+        img = self.driver.find_elements(*Locators.IMAGE_FIRST_CATEGORY)
         return img
 
 
-    def input_text(self):
+    def image_search(self):
         input_text = self.driver.find_element(*Locators.CLASS_NAME2)
         return input_text
 
-    def open_img(self):
-        img1 = self.driver.find_elements(*Locators.CLASS_NAME1)
-        return img1
-
-
-
-
-
-
-
-
-
-
-
-
-
+    def open_first_img(self):
+        img = self.driver.find_elements(*Locators.CLASS_NAME1)
+        return img
